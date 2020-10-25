@@ -10,6 +10,7 @@ import net.haesleinhuepf.clij.macro.documentation.OffersDocumentation;
 import net.haesleinhuepf.clij2.AbstractCLIJ2Plugin;
 import net.haesleinhuepf.clij2.CLIJ2;
 import net.haesleinhuepf.clij2.utilities.HasAuthor;
+import net.haesleinhuepf.clij2.utilities.HasClassifiedInputOutput;
 import net.haesleinhuepf.clij2.utilities.HasLicense;
 import net.haesleinhuepf.clij2.utilities.IsCategorized;
 import net.imglib2.RandomAccessibleInterval;
@@ -20,7 +21,7 @@ import org.scijava.plugin.Plugin;
  * Demo plugin for integrating ImageJ based algorithms into CLIJ workflows.
  */
 @Plugin(type = CLIJMacroPlugin.class, name = "CLIJx_imageJGaussianBlur")
-public class ImageJGaussianBlur extends AbstractCLIJ2Plugin implements CLIJMacroPlugin, CLIJOpenCLProcessor, OffersDocumentation, IsCategorized, HasLicense, HasAuthor
+public class ImageJGaussianBlur extends AbstractCLIJ2Plugin implements CLIJMacroPlugin, CLIJOpenCLProcessor, OffersDocumentation, IsCategorized, HasLicense, HasClassifiedInputOutput
 {
 
     public ImageJGaussianBlur() {
@@ -73,12 +74,17 @@ public class ImageJGaussianBlur extends AbstractCLIJ2Plugin implements CLIJMacro
     }
 
     @Override
-    public String getAuthorName() {
-        return "Put your name here.";
+    public String getLicense() {
+        return "Public domain";
     }
 
     @Override
-    public String getLicense() {
-        return "Public domain";
+    public String getInputType() {
+        return "Image";
+    }
+
+    @Override
+    public String getOutputType() {
+        return "Image";
     }
 }
