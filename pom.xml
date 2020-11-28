@@ -8,17 +8,17 @@
 	<parent>
 		<groupId>net.haesleinhuepf</groupId>
 		<artifactId>clij-parent-pom</artifactId>
-		<version>2.2.0.7</version>
+		<version>2.2.0.11</version>
 		<relativePath />
 	</parent>
 
 	<groupId>net.haesleinhuepf</groupId>
 	<!-- note: the artifactId must contain an underscore _ to make ImageJ handle it correctly.-->
 	<artifactId>clijx-assistant-imagej_</artifactId>
-	<version>0.4.0.7</version>
+	<version>0.4.1.0</version>
 
-	<name>ImageJ wrapper for CLIJx-incubator</name>
-	<description>ImageJ wrapper for CLIJx-incubator</description>
+	<name>ImageJ wrapper for CLIJx-assistant</name>
+	<description>ImageJ wrapper for CLIJx-assistant</description>
 	<url>http://haesleinhuepf.net</url>
 	<inceptionYear>2020</inceptionYear>
 	<organization>
